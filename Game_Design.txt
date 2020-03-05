@@ -1,0 +1,3 @@
+You are a mage in a fantasy world. Different fantasy-type enemies to shoot such as goblins, slimes, dragons, skeletons, spiders, etc.
+For a weapon you weild a staff/staves, that cast different spells such as fireball, icebolt, lightning bolt.
+Different pickups in the world such as mana to keep staves working, gold to purchase items? Loot from enemies.
