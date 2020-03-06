@@ -16,11 +16,6 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        navMeshAgent.SetDestination();
-    }
-
-    private void SetDestination()
-    {
-        throw new NotImplementedException();
+        navMeshAgent.SetDestination(target.position);
     }
 }
