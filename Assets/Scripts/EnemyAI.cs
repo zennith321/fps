@@ -52,7 +52,6 @@ public class EnemyAI : MonoBehaviour
     private void AttackTarget()
     {
         GetComponent<Animator>().SetBool("attack", true);
-        print("Enemy hit player");
     }
 
     void OnDrawGizmosSelected()
