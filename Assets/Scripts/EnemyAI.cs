@@ -32,6 +32,11 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    public void OnDamageTaken() //string referenced
+    {
+        isProvoked = true;
+    }
+
     private void EngageTarget()
     {
         if (distanceToTarget >= navMeshAgent.stoppingDistance)
