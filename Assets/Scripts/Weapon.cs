@@ -11,10 +11,17 @@ public class Weapon : MonoBehaviour
     [SerializeField] ParticleSystem staffVFX;
     [SerializeField] GameObject staffHitFX;
     [SerializeField] Transform vfxParent;
+    //[SerializeField] Ammo ammoSlot;
+    Ammo ammoSlot;
+
+    void Awake()
+    {
+        ammoSlot = FindObjectOfType<Ammo>();
+    }
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && ammoSlot.GetCurrentAmmo() > 0)
         {
             Shoot();
         }
@@ -24,6 +31,7 @@ public class Weapon : MonoBehaviour
     {
         PlayMuzzleFlash();
         ProcessRaycast();
+        ammoSlot.ReduceCurrentAmmo();
     }
 
     private void PlayMuzzleFlash()
