@@ -11,8 +11,10 @@ public class Weapon : MonoBehaviour
     [SerializeField] ParticleSystem staffVFX;
     [SerializeField] GameObject staffHitFX;
     [SerializeField] Transform vfxParent;
-    //[SerializeField] Ammo ammoSlot;
+    [SerializeField] float timeBetweenShots = 0.5f;
     Ammo ammoSlot;
+
+    bool canShoot = true;
 
     void Awake()
     {
@@ -21,17 +23,27 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && ammoSlot.GetCurrentAmmo() > 0)
+        bool isValidShot = 
+        Input.GetMouseButtonDown(0) &&  // is mouse button down?
+        ammoSlot.GetCurrentAmmo() > 0 && // is ammo greater than 0?
+        canShoot; // is shot too soon before last shot
+
+        if (isValidShot)
         {
-            Shoot();
+            StartCoroutine(Shoot());
         }
     }
 
-    private void Shoot()
+    IEnumerator Shoot()
     {
+        canShoot = false;
+
         PlayMuzzleFlash();
         ProcessRaycast();
         ammoSlot.ReduceCurrentAmmo();
+
+        yield return new WaitForSeconds(timeBetweenShots);
+        canShoot = true;
     }
 
     private void PlayMuzzleFlash()
