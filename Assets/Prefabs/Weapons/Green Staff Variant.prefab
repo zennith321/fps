@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 180968, guid: 3ac146b9578b7914db23c8e3518933b2, type: 3}
       propertyPath: m_Name
-      value: Green Staff Variant
+      value: Green Staff
       objectReference: {fileID: 0}
     - target: {fileID: 180968, guid: 3ac146b9578b7914db23c8e3518933b2, type: 3}
       propertyPath: m_IsActive
@@ -70,6 +70,10 @@ PrefabInstance:
     - target: {fileID: 1777564296, guid: 3ac146b9578b7914db23c8e3518933b2, type: 3}
       propertyPath: vfxParent
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777564296, guid: 3ac146b9578b7914db23c8e3518933b2, type: 3}
+      propertyPath: ammoType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ac146b9578b7914db23c8e3518933b2, type: 3}

@@ -12,6 +12,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject staffHitFX;
     [SerializeField] Transform vfxParent;
     [SerializeField] float timeBetweenShots = 0.5f;
+    [SerializeField] AmmoType ammoType;
     Ammo ammoSlot;
 
     bool canShoot = true;
@@ -30,7 +31,7 @@ public class Weapon : MonoBehaviour
     {
         bool isValidShot = 
         Input.GetMouseButtonDown(0) &&  // is mouse button down?
-        ammoSlot.GetCurrentAmmo() > 0 && // is ammo greater than 0?
+        ammoSlot.GetCurrentAmmo(ammoType) > 0 && // is ammo greater than 0?
         canShoot; // is shot too soon before last shot
 
         if (isValidShot)
@@ -45,7 +46,7 @@ public class Weapon : MonoBehaviour
 
         PlayMuzzleFlash();
         ProcessRaycast();
-        ammoSlot.ReduceCurrentAmmo();
+        ammoSlot.ReduceCurrentAmmo(ammoType);
 
         yield return new WaitForSeconds(timeBetweenShots);
         canShoot = true;

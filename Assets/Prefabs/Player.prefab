@@ -342,6 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db1368fce7b23964b8e96d263eb9f2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ammoSlots: []
   ammoAmount: 10
 --- !u!1 &9109834307120479057
 GameObject:
@@ -393,11 +394,6 @@ PrefabInstance:
       propertyPath: FPCamera
       value: 
       objectReference: {fileID: 2000000}
-    - target: {fileID: 9002861190550292031, guid: d289e46df5ec57249ba658f9e150ff11,
-        type: 3}
-      propertyPath: vfxParent
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 9002861190955838079, guid: d289e46df5ec57249ba658f9e150ff11,
         type: 3}
       propertyPath: m_LocalPosition.x

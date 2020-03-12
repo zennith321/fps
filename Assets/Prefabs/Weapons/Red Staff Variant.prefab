@@ -19,6 +19,8 @@ MonoBehaviour:
   staffHitFX: {fileID: 5623502182693275311, guid: 0601e1380b8f9844c9bf27466f17ee1d,
     type: 3}
   vfxParent: {fileID: 0}
+  timeBetweenShots: 0.5
+  ammoType: 0
 --- !u!1001 &7323207635106450949
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -71,7 +71,7 @@ public class WeaponSwitcher : MonoBehaviour
     private void SetWeaponActive()
     {
         int weaponIndex = 0;
-
+        
         foreach (Transform weapon in transform)
         {
             if (weaponIndex == currentWeapon)
