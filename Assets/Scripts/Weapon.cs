@@ -16,6 +16,11 @@ public class Weapon : MonoBehaviour
 
     bool canShoot = true;
 
+    private void OnEnable()
+    {
+        canShoot = true;
+    }
+
     void Awake()
     {
         ammoSlot = FindObjectOfType<Ammo>();
